@@ -162,13 +162,7 @@ The Streamlit dashboard (`dashboard/app.py`) includes:
 - Python 3.12+
 - PostgreSQL 14+ (optional — SQLite fallback enabled by default)
 
-### 1. Clone and navigate
-
-```bash
-cd enterprise-dq-monitoring-engine
-```
-
-### 2. Create virtual environment
+### 1. Create virtual environment
 
 ```bash
 python -m venv venv
@@ -178,60 +172,29 @@ venv\Scripts\activate
 source venv/bin/activate
 ```
 
-### 3. Install dependencies
+### 2. Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 4. Configure database (optional)
-
-Create a `.env` file in the project root:
-
-```env
-DB_HOST=localhost
-DB_PORT=5432
-DB_NAME=dq_monitoring
-DB_USER=postgres
-DB_PASSWORD=postgres
-USE_SQLITE_FALLBACK=true
-```
-
-To use PostgreSQL exclusively, set `USE_SQLITE_FALLBACK=false` and ensure the database exists:
-
-```sql
-CREATE DATABASE dq_monitoring;
-```
-
-### 5. Load sample data
+### 3. Load sample data
 
 ```bash
 python src/load_data.py
 ```
 
-### 6. Run DQ checks
+### 4. Run DQ checks
 
 ```bash
 python src/main.py
 ```
 
-### 7. Launch dashboard
+### 5. Launch dashboard
 
 ```bash
 streamlit run dashboard/app.py
 ```
-
----
-
-## Screenshots
-
-> Place dashboard screenshots in the `screenshots/` folder.
-
-| Page | File |
-|------|------|
-| Dashboard Overview | `screenshots/dashboard_overview.png` |
-| Audit History | `screenshots/audit_history.png` |
-| Failed Records | `screenshots/failed_records.png` |
 
 ---
 
@@ -244,28 +207,6 @@ streamlit run dashboard/app.py
 - **Scalable architecture** ready for scheduling (Airflow/cron) and alerting integrations
 
 ---
-
-## Resume Highlights
-
-- Built an end-to-end **Enterprise DQ Monitoring Engine** with 21 automated checks
-- Implemented **OOP modular architecture** (checks, scoring, audit, anomaly detection)
-- Designed **PostgreSQL schema** with SQLAlchemy ORM and SQLite fallback
-- Created **interactive Streamlit dashboard** with 5 pages and Plotly visualizations
-- Applied **statistical volume anomaly detection** (70%/130% thresholds)
-- Generated **5,000+ realistic sample records** with intentional DQ violations for testing
-
----
-
-## Future Enhancements
-
-- [ ] Email/Slack alerting on P1 severity failures
-- [ ] Apache Airflow DAG for scheduled DQ runs
-- [ ] Great Expectations integration for declarative expectations
-- [ ] PDF/HTML report generation in `reports/`
-- [ ] Role-based access control for the dashboard
-- [ ] ML-based anomaly detection (Isolation Forest, Z-score)
-- [ ] Multi-tenant support with configurable rule sets
-- [ ] REST API layer (FastAPI) for programmatic access
 
 ---
 
