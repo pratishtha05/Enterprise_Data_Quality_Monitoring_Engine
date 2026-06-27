@@ -198,6 +198,13 @@ streamlit run dashboard/app.py
 
 ---
 
+<img width="1908" height="912" alt="image" src="https://github.com/user-attachments/assets/3f39c862-7618-4f59-a21e-e4b048f3c593" />
+<img width="1902" height="911" alt="image" src="https://github.com/user-attachments/assets/795b4eaa-af74-4331-9b8b-d25dbff75506" />
+<img width="1902" height="908" alt="image" src="https://github.com/user-attachments/assets/35f2e529-2be2-45c4-a99e-b02930ad3caf" />
+<img width="1918" height="902" alt="image" src="https://github.com/user-attachments/assets/cd1cffd8-abaa-442b-920d-16c2c8192e49" />
+<img width="1905" height="907" alt="image" src="https://github.com/user-attachments/assets/62bb8bf1-4059-4c18-bbfa-552d233337fd" />
+<img width="1902" height="908" alt="image" src="https://github.com/user-attachments/assets/7be91ee7-7bd8-45ff-a146-f68ccaa7bdb2" />
+
 ## Business Impact
 
 - **Reduced data incidents** through proactive monitoring before data reaches downstream systems
